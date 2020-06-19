@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Felipe Hernandez</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Add icon library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+   @import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+    
+* {
+  box-sizing: border-box;
+}
+
+/* Style the body */
+body {
+    font-family: 'Quicksand', sans-serif;
+  margin: 0;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+}
+
+.profile {
+  flex: 40%;
+  height: 260px;
+  width: 260px;
+  border-radius: 50%;
+}
+
+/* Header/logo Title */
+.header {
+    height: 200px;
+    position: relative;
+    display: inline-block; /* Make the width of box same as image */
+    text-align: center;
+    color: white;
+}
+
+.header .text{
+    text-shadow: 3px 3px black;
+    font-size: auto;
+    position: absolute;
+    z-index: 999;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    top: 40%; /* Adjust this value to move the positioned div up and down */
+    text-align: center;
+    width: 80%; /* Set the width of the positioned div */
+}
+
+/* Style the top navigation bar */
+.navbar {
+  display: flex;
+  background-color: #333;
+}
+
+/* Style the navigation bar links */
+.navbar a {
+  color: white;
+  padding: 14px 20px;
+  text-decoration: none;
+  text-align: center;
+}
+
+/* Change color on hover */
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.progress {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+  color: black;
+  position:relative;
+}
+.progress:after {
+    background-color: var(--bkcolor);
+    color: white;
+    padding-left: 20px;
+    padding-top: 10px;
+    content: var(--content);
+    position: absolute;
+    top:0; bottom:0;
+    left:0; 
+    width: var(--width);
+    -webkit-animation: filler 2s ease-in-out;
+    -moz-animation: filler 2s ease-in-out;
+    animation: filler 2s ease-in-out;
+}
+
+@-webkit-keyframes filler {
+    0% {
+        width:0;
+    }
+}
+@-moz-keyframes filler {
+    0% {
+        width:0;
+    }
+}
+@keyframes filler {
+    0% {
+        width:0;
+    }
+}
+
+/* Column container */
+.row {  
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.side {
+  flex: 30%;
+  background-color: #f1f1f1;
+  padding: 20px;
+}
+
+/* Main column */
+.main {
+  flex: 70%;
+  background-color: white;
+  padding: 20px;
+}
+
+.logo {
+  width: 60%;
+  height: 60%;
+  display: block;
+  margin: 0 auto;
+}
+
+.resume-element{
+  width: 100%; overflow: hidden;
+}
+
+.resume-element .column-left{
+  width: 80%; float: left;
+}
+
+.resume-element .column-rigth{
+  width: 20%; float: right;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+}
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+  .row, .navbar {   
+    flex-direction: column;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- Header -->
+<div class="header">
+    <img src="https://cyrusone.com/app/uploads/2018/03/HERO-GettyImages-175015817-e1520539590362.jpg"/>
+    <div class="text">
+        <h1>Felipe Hernandez</h1>
+    </div>
+</div>
+
+<!-- Navigation Bar -->
+<div class="navbar">
+  <a href="mailto: felipe.hernandez@bts.tech" target="_blank" >Email me</a>
+  <a href="https://www.linkedin.com/in/felipehernandezwong/" target="_blank" class="fa fa-linkedin"></a>
+  <a href="https://www.facebook.com/felipehdzwong" target="_blank" class="fa fa-facebook"></a>
+  <a href="https://github.com/Felipehdzwong" target="_blank" class="fa fa-github"></a>
+</div>
+
+<!-- The flexible grid (content) -->
+<div class="row">
+  <div class="side">
+    <h2>About Me</h2>
+    <img class="profile" src="https://media-exp1.licdn.com/dms/image/C4E03AQHxYUGq3YkdDA/profile-displayphoto-shrink_400_400/0?e=1597881600&v=beta&t=sQbOGiCam_763iY9G03FJk4cfvF958qsVsnDGGZSaQA"/>
+    <p><b>Software Engineer</b> with 8 years of experience in the <i>software development life cycle</i>. Wide experience developing and implementing digital solutions using agile methodologies. Hit me up whether you seek to collaborate or if you have any question.</p>
+    <h3>Key Skills</h3>
+    <p>Some of my soft skills are:</p>
+    <div class="progress" style="--content: 'Leadership'; --width: 82%; --bkcolor: #46b3e6"></div><br>
+    <div class="progress" style="--content: 'Teamwork'; --width: 88%; --bkcolor: #46b3e6"></div><br>
+    <div class="progress" style="--content: 'Communication'; --width: 85%; --bkcolor: #46b3e6"></div>
+    <p>Some of my technical skills are:</p>
+    <div class="progress" style="--content: 'OOP (Java and C#)'; --width: 90%;--bkcolor: #ff7a50""></div><br>
+    <div class="progress" style="--content: 'Web Services and APIs'; --width: 80%;--bkcolor: #ff7a50""></div><br>
+    <div class="progress" style="--content: 'Non-relational and RDBS'; --width: 85%;--bkcolor: #ff7a50""></div>
+  </div>
+  <div class="main">
+    <h2>Experience</h2>
+    <h3>Product Owner | LavanTru | Barcelona Spain, Jul 2020 - Present</h3>
+    <div class="resume-element">
+      <div class="column-left">
+        <p>Co-founder of a peer-to-peer social laundry service through the software lifecycle. </p>
+        <ul>
+          <li>Definition of business model strategies for starting and growing a digital business.</li>
+          <li>Analysis and definition of user personas. Wireframes and mockups created to A/B test with customers.</li>
+          <li>Worked in Scrum in Jira to develop MVP. Prioritization and management of product backlog.</li>
+          <li>Creation and management of evolving product roadmap and project roadmap</li>
+          <li>Follow up with team and stakeholders during Scrum events.</li>
+          <li>SWOT, KPI and OKR analysis and management.</li>
+        </ul>
+      </div>
+      <div class="column-rigth"> 
+        <img src="https://barcelonatechnologyschool-my.sharepoint.com/personal/felipe_hernandez_bts_tech/Documents/LavanTru%20Docs/lavlogo.PNG" class="logo"/>
+      </div>
+    </div>
+    <h3>Senior Software Test Analyst | Hexaware Technologies | Virginia USA, Aug 2014 - Jul 2019</h3>
+    <div class="resume-element">
+      <div class="column-left">
+        <p>SDET for the Financial and Housing Morgage Industry.</p>
+        <ul>
+          <li>Testing of Financial Systems and their interaction with other systems and platforms.</li>
+          <li>Creation of user stories, system requirements and design and execution of test cases in TFS.</li>
+          <li>Defect management in TFS and ALM.</li>
+          <li>Testing automation to reduce effort and costs.</li>
+          <li>Testing status reports and LOE estimations</li>
+          <li>Coordination and guidance of junior testers.</li>
+          <li>Creation of test plans and test strategies.</li>
+        </ul>
+      </div>
+      <div class="column-rigth"> 
+        <img src="https://vectorlogoseek.com/wp-content/uploads/2019/07/hexaware-technologies-vector-logo.png" class="logo"/>
+      </div>
+    </div>
+    <h3>Software Developer | Advanced Business Systems | Coahuila Mexico, Jan 2014 - Aug 2019</h3>
+    <div class="resume-element">
+      <div class="column-left">
+        <p>Software developer for the public sector.</p>
+        <ul>
+          <li>Development of a GRP system in C# with architectural design patterns.</li>
+          <li>System designed in Unified Modeling Language.</li>
+          <li>Design of system components and interaction.</li>
+          <li>Daily communication with system analysts and testers.</li>
+          <li>Development of stored procedures in MS SQL for data processing and transformation.</li>
+          <li>Code documentation and reviews.</li>
+        </ul>
+      </div>
+      <div class="column-rigth"> 
+        <img src="data:image/jpeg;base64,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REQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERA//2Q==" class="logo"/>
+      </div>
+    </div>
+    <br>
+    <h2>Education</h2>
+    <h3>University of Barcelona - BTS, Jul, 2020</h3>
+    <div class="resume-element">
+      <div class="column-left">
+        <p>Master in Digital Solutions Development. </p>
+      </div>
+      <div class="column-rigth"> 
+        <img src="https://www.brandemia.org/sites/default/files/sites/default/files/logo_universidad_barcelona_nuevo.jpg" class="logo"/>
+      </div> 
+    </div>
+    <h3>Monterrey Institute of Technology and Higher Education, May, 2014</h3>
+    <div class="resume-element">
+      <div class="column-left">
+        <p>Information and Communication Technologies Engineer.</p>
+      </div>
+      <div class="column-rigth"> 
+        <img src="https://i0.wp.com/citris-uc.org/wp-content/uploads/2018/12/ITESM-Logo.png?ssl=1" class="logo"/>
+      </div> 
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<div class="footer">
+  <!-- <h2>Footer</h2> -->
+  <p className="pt-4">&copy; Felipe Hernandez 2020. All Rights Reserved.</p>
+</div>
+
+</body>
+</html>
